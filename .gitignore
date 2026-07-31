@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# local env / secrets
+.env
+
+# generated data and results (large, reproducible from scripts)
+data/*
+!data/.gitkeep
+results/*
+!results/.gitkeep
+
+# model caches
+.cache/
+*.ckpt
+*.safetensors
+
+.DS_Store
