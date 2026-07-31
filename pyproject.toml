@@ -1,0 +1,38 @@
+[project]
+name = "trusted-monitoring"
+version = "0.1.0"
+description = "Replication and extension of trusted monitoring for AI control on APPS"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "inspect-ai>=0.3",
+    "transformers>=4.44",
+    "torch>=2.3",
+    "accelerate>=0.33",
+    "datasets>=2.20",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "matplotlib>=3.9",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
